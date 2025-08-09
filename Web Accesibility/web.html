@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wandering Photographer - Travel Photography Prints</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Header image */
+        .header-image {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px 0;
+        }
+
+        .header-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 768px) {
+            .header-img {
+                border-radius: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header>
+        <button class="cart-button" aria-label="Shopping cart - 0 items" type="button">
+            🛒
+            <span class="sr-only">Go to checkout</span>
+        </button>
+        
+        
+        <div class="header-image">
+            <img src="pictures/TheDivider.png" 
+                 alt="Header banner for The Wandering Photographer travel blog"
+                 class="header-img">
+        </div>
+    </header>
+
+    <div class="container">
+        <main id="main-content">
+            <h1 class="sr-only">Travel Photography Prints by The Wandering Photographer</h1>
+            
+            <section class="photo-gallery" aria-label="Photography collection">
+                <article class="photo-item">
+                    <div class="photo-container">
+                        <
+                        <img src="pictures/OceanPhoto.jpg" 
+                             alt="Serene coastal landscape in Greenland showing turquoise water meeting white ice formations under a gradient sky transitioning from blue to soft pink"
+                             loading="lazy">
+                    </div>
+                    <div class="photo-description">
+                        This was from a fabulous trip to the coast of Greenland with my family. The water was lovely- but very cold!
+                    </div>
+                    <button class="add-to-basket" type="button" aria-describedby="greenland-description">
+                        Add to basket
+                        <span class="sr-only">- Greenland coast photograph</span>
+                    </button>
+                    <div id="greenland-description" class="sr-only">High-quality print of Greenland coastal landscape</div>
+                </article>
+
+                <article class="photo-item">
+                    <div class="photo-container">
+                       
+                        <img src="pictures/BridgePhoto (1).jpg" 
+                             alt="Dramatic upward angle view of the iconic Golden Gate Bridge in San Francisco, showing the red-orange tower and suspension cables against a clear blue sky"
+                             loading="lazy">
+                    </div>
+                    <div class="photo-description">
+                        A picture of the Golden Gate Bridge, New York! New York!
+                    </div>
+                    <button class="add-to-basket" type="button" aria-describedby="bridge-description">
+                        Add to basket
+                        <span class="sr-only">- Golden Gate Bridge photograph</span>
+                    </button>
+                    <div id="bridge-description" class="sr-only">High-quality print of Golden Gate Bridge architectural photography</div>
+                </article>
+
+                <article class="photo-item">
+                    <div class="photo-container">
+                       
+                        <img src="pictures/ValleyPhoto.jpg" 
+                             alt="Breathtaking aerial view of a deep blue fjord cutting through mountainous terrain in Greenland, with rocky peaks and cloudy sky"
+                             loading="lazy">
+                    </div>
+                    <div class="photo-description">
+                        Another great photo from Greenland. It's a river valley where a glacier used to be.
+                    </div>
+                    <button class="add-to-basket" type="button" aria-describedby="fjord-description">
+                        Add to basket
+                        <span class="sr-only">- Greenland fjord photograph</span>
+                    </button>
+                    <div id="fjord-description" class="sr-only">High-quality print of Greenland fjord landscape</div>
+                </article>
+
+                <article class="photo-item">
+                    <div class="photo-container">
+                      
+                        <img src="pictures/WaterfallPhoto.jpg"    
+                             alt="Powerful waterfall cascading down through lush green moss-covered rocks, creating mist and spray in a verdant natural setting"
+                             loading="lazy">
+                    </div>
+                    <div class="photo-description">
+                        The waterfall made such a lovely sound. I could have fallen asleep!
+                    </div>
+                    <button class="add-to-basket" type="button" aria-describedby="waterfall-description">
+                        Add to basket
+                        <span class="sr-only">- Waterfall photograph</span>
+                    </button>
+                    <div id="waterfall-description" class="sr-only">High-quality print of waterfall nature photography</div>
+                </article>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="copyright">Copyright The Wandering Photographer 2018.</div>
+            <nav aria-label="Site navigation">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#about">About me</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
