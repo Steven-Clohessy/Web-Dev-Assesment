@@ -1,0 +1,524 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;
+    background: linear-gradient(135deg, #1a0f0a 0%, #2e1f1a 50%, #3e2a16 100%);
+    min-height: 100vh;
+}
+
+/* Skip to main content link for screen readers */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #ffa500;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* Header styles */
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid #ffa500;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffa500;
+    text-decoration: none;
+}
+
+/* Navigation styles */
+nav {
+    margin-top: 1rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+nav a:hover,
+nav a:focus {
+    background: #ffa500;
+    color: white;
+    outline: none;
+    border-color: #fff;
+}
+
+nav a[aria-current="page"] {
+    background: #ffa500;
+    color: white;
+}
+
+/* Main content styles */
+main {
+    padding: 2rem 0;
+}
+
+.planet-hero {
+    text-align: center;
+    padding: 4rem 0;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.planet-hero::before {
+    content: "🟠";
+    font-size: 8rem;
+    display: block;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 20px rgba(255, 165, 0, 0.5));
+}
+
+.planet-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #ffa500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.planet-hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #ccc;
+}
+
+/* Facts grid */
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.fact-card {
+    background: rgba(255, 165, 0, 0.1);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 165, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fact-card:hover,
+.fact-card:focus-within {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 165, 0, 0.2);
+}
+
+.fact-card h3 {
+    color: #ffa500;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.fact-card p {
+    margin-bottom: 0.5rem;
+}
+
+.fact-value {
+    color: #ffb347;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Moon system interactive */
+.moon-system {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 3rem;
+    border-radius: 12px;
+    margin: 3rem 0;
+    border: 2px solid rgba(255, 165, 0, 0.3);
+}
+
+.moon-system h2 {
+    color: #ffa500;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.moon-selector {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.moon-btn {
+    padding: 0.8rem 1.5rem;
+    background: rgba(255, 165, 0, 0.2);
+    border: 2px solid #ffa500;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.moon-btn:hover,
+.moon-btn:focus {
+    background: #ffa500;
+    outline: none;
+    transform: translateY(-2px);
+}
+
+.moon-btn.active {
+    background: #ffa500;
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.5);
+}
+
+.moon-display {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 2rem;
+    min-height: 300px;
+}
+
+.moon-info {
+    display: none;
+}
+
+.moon-info.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.moon-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    font-size: 4rem;
+    min-height: 100px;
+}
+
+.moon-details h3 {
+    color: #ffa500;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.moon-details p {
+    margin-bottom: 1rem;
+    color: #ccc;
+}
+
+.moon-stat {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 165, 0, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+.moon-stat strong {
+    color: #ffa500;
+}
+
+/* Great Red Spot animation */
+.great-red-spot {
+    background: rgba(255, 165, 0, 0.1);
+    padding: 3rem;
+    border-radius: 12px;
+    margin: 3rem 0;
+    border: 2px solid rgba(255, 165, 0, 0.3);
+    text-align: center;
+}
+
+.great-red-spot h2 {
+    color: #ffa500;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.storm-visualization {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 2rem auto;
+    background: linear-gradient(45deg, #ffa500, #ff6b35, #d2691e);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.storm-swirl {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(circle, rgba(255,0,0,0.7) 0%, rgba(139,69,19,0.3) 100%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate 10s linear infinite;
+}
+
+.storm-eye {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    height: 30%;
+    background: #8B0000;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate 5s linear infinite reverse;
+}
+
+@keyframes rotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.storm-controls {
+    margin-top: 2rem;
+}
+
+.storm-btn {
+    padding: 1rem 2rem;
+    background: rgba(255, 165, 0, 0.2);
+    border: 2px solid #ffa500;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 0.5rem;
+}
+
+.storm-btn:hover,
+.storm-btn:focus {
+    background: #ffa500;
+    outline: none;
+}
+
+/* Interactive sections */
+.interactive-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 3rem;
+    border-radius: 12px;
+    margin: 3rem 0;
+    border: 2px solid rgba(255, 165, 0, 0.3);
+}
+
+.interactive-section h2 {
+    color: #ffa500;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Accessibility controls */
+.accessibility-controls {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 2px solid #ffa500;
+    z-index: 200;
+}
+
+.accessibility-controls h3 {
+    color: #ffa500;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.accessibility-controls button {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background: #ffa500;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background 0.3s ease;
+}
+
+.accessibility-controls button:hover,
+.accessibility-controls button:focus {
+    background: #e6940a;
+    outline: 2px solid white;
+}
+
+/* High contrast mode */
+.high-contrast {
+    background: #000 !important;
+    color: #fff !important;
+}
+
+.high-contrast .fact-card,
+.high-contrast .moon-system,
+.high-contrast .great-red-spot,
+.high-contrast .interactive-section {
+    background: #333 !important;
+    border-color: #fff !important;
+}
+
+.high-contrast .planet-hero {
+    background: #111 !important;
+}
+
+/* Large text mode */
+.large-text {
+    font-size: 120% !important;
+}
+
+.large-text h1 {
+    font-size: 3.6rem !important;
+}
+
+.large-text h2 {
+    font-size: 2.4rem !important;
+}
+
+.large-text h3 {
+    font-size: 1.68rem !important;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+    border-top: 2px solid #ffa500;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .planet-hero h1 {
+        font-size: 2rem;
+    }
+
+    .planet-hero::before {
+        font-size: 4rem;
+    }
+
+    .accessibility-controls {
+        position: static;
+        transform: none;
+        margin: 2rem auto;
+        max-width: 300px;
+    }
+
+    .facts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .moon-selector {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .storm-visualization {
+        width: 250px;
+        height: 150px;
+    }
+}
+
+/* Focus indicators for keyboard navigation */
+button:focus,
+a:focus,
+input:focus,
+.moon-btn:focus,
+.storm-btn:focus {
+    outline: 3px solid #ffa500;
+    outline-offset: 2px;
+}
+
+/* Screen reader only content */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Animation controls */
+.paused .storm-swirl,
+.paused .storm-eye {
+    animation-play-state: paused;
+}
+
+.fast .storm-swirl {
+    animation-duration: 2s;
+}
+
+.fast .storm-eye {
+    animation-duration: 1s;
+}

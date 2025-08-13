@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Planetarium - Explore the Milky Way</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Skip to main content link for screen readers -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo" aria-label="Big Planetarium Home">🌌 Big Planetarium</a>
+                <nav role="navigation" aria-label="Main navigation">
+                    <ul>
+                        <li><a href="index.html" aria-current="page">Home</a></li>
+                        <li><a href="earth.html">Earth</a></li>
+                        <li><a href="mars.html">Mars</a></li>
+                        <li><a href="jupiter.html">Jupiter</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        <div class="container">
+            <section class="hero">
+                <h1>Welcome to the Milky Way Galaxy</h1>
+                <p>Discover the wonders of our cosmic neighborhood! The Milky Way is home to billions of stars, fascinating planets, and countless mysteries waiting to be explored. Join us on an educational journey through space that's accessible to everyone.</p>
+            </section>
+
+            <section class="galaxy-overview" aria-labelledby="overview-heading">
+                <h2 id="overview-heading" class="sr-only">Galaxy Overview Information</h2>
+                
+                <article class="info-card">
+                    <h2>About Our Galaxy</h2>
+                    <p>The Milky Way is a barred spiral galaxy containing over 100 billion stars. It's approximately 100,000 light-years in diameter and is home to our Solar System.</p>
+                    <p>Scientists estimate our galaxy is about 13.6 billion years old, making it nearly as old as the universe itself!</p>
+                </article>
+
+                <article class="info-card">
+                    <h2>Our Solar System</h2>
+                    <p>Located in the Orion Arm of the Milky Way, our Solar System contains eight planets, numerous moons, asteroids, and comets.</p>
+                    <p>Each planet has unique characteristics that make them fascinating subjects of study and exploration.</p>
+                </article>
+
+                <article class="info-card">
+                    <h2>Educational Mission</h2>
+                    <p>At Big Planetarium, we believe that space science should be accessible to everyone, regardless of background or ability.</p>
+                    <p>Our mission is to make the wonders of the universe understandable and exciting for all learners.</p>
+                </article>
+            </section>
+
+            <section class="planets-section" aria-labelledby="planets-heading">
+                <h2 id="planets-heading" class="planets-title">Explore the Planets</h2>
+                
+                <div class="planets-grid">
+                    <article class="planet-card">
+                        <div class="planet-image" role="img" aria-label="Earth - The Blue Planet">🌍</div>
+                        <div class="planet-info">
+                            <h3>Earth - Our Home Planet</h3>
+                            <p>The only known planet with life, Earth is a vibrant world with diverse ecosystems, vast oceans, and a protective atmosphere that makes life possible.</p>
+                            <a href="earth.html" class="learn-more-btn" aria-describedby="earth-description">
+                                Learn More About Earth
+                                <span id="earth-description" class="sr-only">Opens detailed page about Earth with images, facts, and interactive content</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="planet-card">
+                        <div class="planet-image" role="img" aria-label="Mars - The Red Planet">🔴</div>
+                        <div class="planet-info">
+                            <h3>Mars - The Red Planet</h3>
+                            <p>Known for its rusty red appearance, Mars has polar ice caps, the largest volcano in the solar system, and evidence of ancient water flows.</p>
+                            <a href="mars.html" class="learn-more-btn" aria-describedby="mars-description">
+                                Learn More About Mars
+                                <span id="mars-description" class="sr-only">Opens detailed page about Mars with exploration history and surface features</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="planet-card">
+                        <div class="planet-image" role="img" aria-label="Jupiter - The Gas Giant">🟠</div>
+                        <div class="planet-info">
+                            <h3>Jupiter - The Gas Giant</h3>
+                            <p>The largest planet in our solar system, Jupiter is a massive gas giant with a Great Red Spot storm and over 80 known moons, including the four Galilean moons.</p>
+                            <a href="jupiter.html" class="learn-more-btn" aria-describedby="jupiter-description">
+                                Learn More About Jupiter
+                                <span id="jupiter-description" class="sr-only">Opens detailed page about Jupiter with information about its moons and atmospheric features</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Accessibility Controls -->
+    <aside class="accessibility-controls" aria-label="Accessibility Options">
+        <h3>Accessibility</h3>
+        <button onclick="toggleHighContrast()" aria-label="Toggle high contrast mode">High Contrast</button>
+        <button onclick="toggleLargeText()" aria-label="Toggle large text size">Large Text</button>
+        <button onclick="resetAccessibility()" aria-label="Reset all accessibility options">Reset</button>
+    </aside>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <p>&copy; 2024 Big Planetarium. Making space accessible to everyone.</p>
+            <p>Contact us: <a href="mailto:info@bigplanetarium.org" class="footer-link">info@bigplanetarium.org</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

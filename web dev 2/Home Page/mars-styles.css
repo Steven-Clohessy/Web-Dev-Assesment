@@ -1,0 +1,551 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;
+    background: linear-gradient(135deg, #1a0a0a 0%, #2e1a1a 50%, #3e1616 100%);
+    min-height: 100vh;
+}
+
+/* Skip to main content link for screen readers */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #cd5c5c;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* Header styles */
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid #cd5c5c;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #cd5c5c;
+    text-decoration: none;
+}
+
+/* Navigation styles */
+nav {
+    margin-top: 1rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+nav a:hover,
+nav a:focus {
+    background: #cd5c5c;
+    color: white;
+    outline: none;
+    border-color: #fff;
+}
+
+nav a[aria-current="page"] {
+    background: #cd5c5c;
+    color: white;
+}
+
+/* Main content styles */
+main {
+    padding: 2rem 0;
+}
+
+.planet-hero {
+    text-align: center;
+    padding: 4rem 0;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.planet-hero::before {
+    content: "🔴";
+    font-size: 8rem;
+    display: block;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 20px rgba(205, 92, 92, 0.5));
+}
+
+.planet-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #cd5c5c;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.planet-hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #ccc;
+}
+
+/* Facts grid */
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.fact-card {
+    background: rgba(205, 92, 92, 0.1);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(205, 92, 92, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fact-card:hover,
+.fact-card:focus-within {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(205, 92, 92, 0.2);
+}
+
+.fact-card h3 {
+    color: #cd5c5c;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.fact-card p {
+    margin-bottom: 0.5rem;
+}
+
+.fact-value {
+    color: #f08080;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Mars exploration timeline */
+.timeline {
+    position: relative;
+    margin: 3rem 0;
+    padding: 2rem 0;
+}
+
+.timeline-title {
+    text-align: center;
+    color: #cd5c5c;
+    font-size: 2.5rem;
+    margin: 3rem 0 4rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #cd5c5c;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    margin: 3rem 0;
+    position: relative;
+}
+
+.timeline-date {
+    flex: 0 0 15%;
+    text-align: right;
+    padding-right: 2rem;
+    background: #cd5c5c;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(205, 92, 92, 0.3);
+}
+
+.timeline-content {
+    flex: 1;
+    padding: 2rem;
+    background: rgba(205, 92, 92, 0.1);
+    border-radius: 12px;
+    margin-left: 3rem;
+    border: 1px solid rgba(205, 92, 92, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 30px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 12px solid rgba(205, 92, 92, 0.1);
+}
+
+.timeline-content:hover,
+.timeline-content:focus-within {
+    transform: translateX(10px);
+    box-shadow: 0 10px 25px rgba(205, 92, 92, 0.2);
+}
+
+.timeline-content h3 {
+    color: #cd5c5c;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.timeline-content p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Interactive weather simulator */
+.weather-simulator {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 3rem;
+    border-radius: 12px;
+    margin: 3rem 0;
+    border: 2px solid rgba(205, 92, 92, 0.3);
+}
+
+.weather-simulator h2 {
+    color: #cd5c5c;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.section-description {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+.weather-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.weather-btn {
+    padding: 1rem 2rem;
+    background: rgba(205, 92, 92, 0.2);
+    border: 2px solid #cd5c5c;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.weather-btn:hover,
+.weather-btn:focus {
+    background: #cd5c5c;
+    outline: none;
+    transform: translateY(-2px);
+}
+
+.weather-btn.active {
+    background: #cd5c5c;
+    box-shadow: 0 0 15px rgba(205, 92, 92, 0.5);
+}
+
+.weather-display {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.weather-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.weather-info h3 {
+    color: #cd5c5c;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.weather-info p {
+    margin-bottom: 0.5rem;
+    color: #ccc;
+}
+
+/* Media section */
+.media-list {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: #ccc;
+}
+
+.media-list li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+}
+
+.media-placeholder {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 3rem;
+    background: rgba(205, 92, 92, 0.1);
+    border-radius: 12px;
+    border: 2px dashed #cd5c5c;
+}
+
+.placeholder-title {
+    font-size: 1.2rem;
+    color: #cd5c5c;
+    margin-bottom: 1rem;
+}
+
+.placeholder-text {
+    color: #ccc;
+}
+
+/* Animation for weather changes */
+@keyframes marsStorm {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.storm-animation {
+    animation: marsStorm 2s infinite;
+}
+
+/* Accessibility controls */
+.accessibility-controls {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 2px solid #cd5c5c;
+    z-index: 200;
+}
+
+.accessibility-controls h3 {
+    color: #cd5c5c;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.accessibility-controls button {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background: #cd5c5c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background 0.3s ease;
+}
+
+.accessibility-controls button:hover,
+.accessibility-controls button:focus {
+    background: #b34a4a;
+    outline: 2px solid white;
+}
+
+/* High contrast mode */
+.high-contrast {
+    background: #000 !important;
+    color: #fff !important;
+}
+
+.high-contrast .fact-card,
+.high-contrast .weather-simulator,
+.high-contrast .timeline-content {
+    background: #333 !important;
+    border-color: #fff !important;
+}
+
+.high-contrast .planet-hero {
+    background: #111 !important;
+}
+
+/* Large text mode */
+.large-text {
+    font-size: 120% !important;
+}
+
+.large-text h1 {
+    font-size: 3.6rem !important;
+}
+
+.large-text h2 {
+    font-size: 2.4rem !important;
+}
+
+.large-text h3 {
+    font-size: 1.68rem !important;
+}
+
+.large-text .timeline-title {
+    font-size: 3rem !important;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+    border-top: 2px solid #cd5c5c;
+}
+
+.footer-link {
+    color: #cd5c5c;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .planet-hero h1 {
+        font-size: 2rem;
+    }
+
+    .planet-hero::before {
+        font-size: 4rem;
+    }
+
+    .timeline::before {
+        left: 30px;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        margin-left: 2rem;
+    }
+
+    .timeline-date {
+        align-self: flex-start;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .timeline-content {
+        margin-left: 0;
+    }
+
+    .timeline-content::before {
+        display: none;
+    }
+
+    .timeline-title {
+        font-size: 2rem;
+    }
+
+    .weather-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .weather-btn {
+        width: 200px;
+    }
+
+    .accessibility-controls {
+        position: static;
+        transform: none;
+        margin: 2rem auto;
+        max-width: 300px;
+    }
+}
+
+/* Focus indicators for keyboard navigation */
+button:focus,
+a:focus,
+input:focus {
+    outline: 3px solid #cd5c5c;
+    outline-offset: 2px;
+}
+
+/* Screen reader only content */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

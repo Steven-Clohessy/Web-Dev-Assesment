@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jupiter - The Gas Giant | Big Planetarium</title>
+    <link rel="stylesheet" href="jupiter-styles.css">
+</head>
+<body>
+    <!-- Skip to main content link for screen readers -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo" aria-label="Big Planetarium Home">🌌 Big Planetarium</a>
+                <nav role="navigation" aria-label="Main navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="earth.html">Earth</a></li>
+                        <li><a href="mars.html">Mars</a></li>
+                        <li><a href="jupiter.html" aria-current="page">Jupiter</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        <div class="container">
+            <section class="planet-hero">
+                <h1>Jupiter - The Gas Giant</h1>
+                <p>The largest planet in our solar system, Jupiter is a massive ball of gas and liquid with a complex system of moons and rings. This giant protects the inner planets from asteroids and comets with its powerful gravitational pull.</p>
+            </section>
+
+            <section class="facts-grid" aria-labelledby="facts-heading">
+                <h2 id="facts-heading" class="sr-only">Jupiter Facts and Statistics</h2>
+                
+                <article class="fact-card">
+                    <h3>Basic Information</h3>
+                    <p>Distance from Sun: <span class="fact-value">484 million miles (778 million km)</span></p>
+                    <p>Diameter: <span class="fact-value">88,695 miles (142,800 km)</span></p>
+                    <p>Day Length: <span class="fact-value">9.9 hours</span></p>
+                    <p>Year Length: <span class="fact-value">12 Earth years</span></p>
+                </article>
+
+                <article class="fact-card">
+                    <h3>Atmosphere</h3>
+                    <p>Composition: <span class="fact-value">89% Hydrogen, 10% Helium</span></p>
+                    <p>Wind Speeds: <span class="fact-value">Up to 400 mph (640 km/h)</span></p>
+                    <p>Temperature: <span class="fact-value">-234°F (-145°C)</span></p>
+                </article>
+
+                <article class="fact-card">
+                    <h3>Physical Features</h3>
+                    <p>Mass: <span class="fact-value">2.5x all other planets combined</span></p>
+                    <p>Great Red Spot: <span class="fact-value">Larger than Earth</span></p>
+                    <p>Number of Moons: <span class="fact-value">95 confirmed</span></p>
+                    <p>Ring System: <span class="fact-value">4 main rings</span></p>
+                </article>
+            </section>
+
+            <section class="moon-system" aria-labelledby="moons-heading">
+                <h2 id="moons-heading">Explore Jupiter's Major Moons</h2>
+                <p style="text-align: center; margin-bottom: 2rem; color: #ccc;">Click on each moon to learn about Jupiter's fascinating satellite system!</p>
+                
+                <div class="moon-selector" role="tablist" aria-label="Jupiter's moons">
+                    <button class="moon-btn active" role="tab" aria-selected="true" aria-controls="io-info" id="io-tab">Io</button>
+                    <button class="moon-btn" role="tab" aria-selected="false" aria-controls="europa-info" id="europa-tab">Europa</button>
+                    <button class="moon-btn" role="tab" aria-selected="false" aria-controls="ganymede-info" id="ganymede-tab">Ganymede</button>
+                    <button class="moon-btn" role="tab" aria-selected="false" aria-controls="callisto-info" id="callisto-tab">Callisto</button>
+                </div>
+
+                <div class="moon-display">
+                    <div id="io-info" class="moon-info active" role="tabpanel" aria-labelledby="io-tab">
+                        <div class="moon-visual">🌋</div>
+                        <div class="moon-details">
+                            <h3>Io - The Volcanic Moon</h3>
+                            <p>Io is the most volcanically active body in the solar system, with over 400 active volcanoes. Its colorful surface is painted by sulfur compounds from constant volcanic activity.</p>
+                            <div class="moon-stat">
+                                <span>Diameter:</span>
+                                <strong>2,264 miles (3,643 km)</strong>
+                            </div>
+                            <div class="moon-stat">
+                                <span>Distance from Jupiter:</span>
+                                <strong>262,000 miles (421,700 km)</strong>
+                            </div>
+                            <div class="moon-stat">
+                                <span>Orbital Period:</span>
+                                <strong>1.8 Earth days</strong>
+                            </div>
+                            <div class="moon-stat">
+                                <span>Notable Feature:</span>
+                                <strong>Most volcanically active</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="europa-info" class="moon-info" role="tabpanel" aria-labelledby="europa-tab">
+                        <div class="moon-visual">🧊</div>
+                        <div class="moon-details">
+                            <h3>Europa - The Ocean World</h3>
+                            <p>Europa has a smooth ice surface covering a global ocean that may contain twice as much water as Earth's oceans. It's one of the most promising places to search for life.</p>
+                            <div class="moon-stat">
+                                <span>Diameter:</span>
+                                <strong>1,940 miles (3,122 km)</strong>
+                            </div>
+                            <div class="moon-stat">
+                                <span>Distance from Jupiter:</span>
+                                <strong>417,000 miles (670,900 km)</strong>
+                            </div>
+                            <div class="moon-stat">
+                                <span>Orbital Period:</span>
+                                <strong>3.5 Earth days</strong>
+                            </div>
+                            <div class="moon-stat">
+                                <span>Notable Feature:</span>
+                                <strong>Subsurface ocean</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="ganymede-info" class="moon-info" role="tabpanel" aria-labelledby="ganymede-tab">
+                        <div class="moon-visual">🔵</div>
+                        <div class="moon-details">
+                            <h3>Ganymede - The Largest Moon</h3>
+                            <p>Ganymede is the largest moon in the solar system, even bigger than Mercury! It has its own magnetic field and likely has a subsurface ocean.</p>
+                            <div class="moon-stat">
+                                <span>Diameter:</span>
+                                <strong>3,273 miles (5,268 km)</strong>
+                            </div>
+                            <div class="moon-stat">
+                                <span>Distance from Jupiter:</span>
+                                <strong>665,000 miles (1,070,400 km)</strong>
+                            </div>
+                            <div class="moon-stat">
+                                <span>Orbital Period:</span>
+                                <strong>7.2 Earth days</strong>
+                            </div>
+                            <div class="moon-stat">
+                                <span>Notable Feature:</span>
+                                <strong>Largest moon in solar system</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="callisto-info" class="moon-info" role="tabpanel" aria-labelledby="callisto-tab">
+                        <div class="moon-visual">⚫</div>
+                        <div class="moon-details">
+                            <h3>Callisto - The Ancient Moon</h3>
+                            <p>Callisto is the most heavily cratered object in the solar system. Its ancient surface tells the story of billions of years of impacts.</p>
+                            <div class="moon-stat">
+                                <span>Diameter:</span>
+                                <strong>2,995 miles (4,821 km)</strong>
+                            </div>
+                            <div class="moon-stat">
+                                <span>Distance from Jupiter:</span>
+                                <strong>1,170,000 miles (1,882,700 km)</strong>
+                            </div>
+                            <div class="moon-stat">
+                                <span>Orbital Period:</span>
+                                <strong>16.7 Earth days</strong>
+                            </div>
+                            <div class="moon-stat">
+                                <span>Notable Feature:</span>
+                                <strong>Most cratered surface</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="great-red-spot" aria-labelledby="storm-heading">
+                <h2 id="storm-heading">The Great Red Spot</h2>
+                <p style="color: #ccc; margin-bottom: 2rem;">Jupiter's most famous feature is a giant storm that has been raging for over 300 years!</p>
+                
+                <div class="storm-visualization" aria-label="Animated visualization of Jupiter's Great Red Spot storm">
+                    <div class="storm-swirl"></div>
+                    <div class="storm-eye"></div>
+                </div>
+                
+                <div class="storm-info" style="margin-top: 2rem; color: #ccc; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    <p><strong style="color: #ffa500;">Size:</strong> Larger than Earth (could fit 2-3 Earths inside)</p>
+                    <p><strong style="color: #ffa500;">Wind Speed:</strong> Up to 400 mph (640 km/h)</p>
+                    <p><strong style="color: #ffa500;">Duration:</strong> At least 300+ years</p>
+                    <p><strong style="color: #ffa500;">Color:</strong> Red-orange from chemical compounds</p>
+                </div>
+                
+                <div class="storm-controls">
+                    <button class="storm-btn" id="pause-storm">Pause Animation</button>
+                    <button class="storm-btn" id="speed-storm">Speed Up</button>
+                </div>
+            </section>
+
+            <section class="interactive-section" aria-labelledby="media-heading">
+                <h2 id="media-heading">Jupiter Surface</h2>
+                <p style="text-align: center; color: #ccc; margin-bottom: 2rem;">
+                    This is a picture of jupiters surface
+                </p>
+                <ul style="max-width: 600px; margin: 0 auto; color: #ccc; list-style: none; padding: 0; text-align: center;">
+                    <li>
+                        <img src="Picture/jupiter.png" alt="Jupiter" width="600" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                    </li>
+                </ul>
+                
+            </section>
+        </div>
+    </main>
+
+    <!-- Accessibility Controls -->
+    <aside class="accessibility-controls" aria-label="Accessibility Options">
+        <h3>Accessibility</h3>
+        <button aria-label="Toggle high contrast mode">High Contrast</button>
+        <button aria-label="Toggle large text size">Large Text</button>
+        <button aria-label="Reset all accessibility options">Reset</button>
+    </aside>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <p>&copy; 2024 Big Planetarium. Making space accessible to everyone.</p>
+            <p>Contact us: <a href="mailto:info@bigplanetarium.org" style="color: #ffa500;">info@bigplanetarium.org</a></p>
+        </div>
+    </footer>
+
+    <script src="jupiter-script.js"></script>
+</body>
+</html>

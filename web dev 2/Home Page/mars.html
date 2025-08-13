@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars - The Red Planet | Big Planetarium</title>
+    <link rel="stylesheet" href="mars-styles.css">
+</head>
+<body>
+    <!-- Skip to main content link for screen readers -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo" aria-label="Big Planetarium Home">🌌 Big Planetarium</a>
+                <nav role="navigation" aria-label="Main navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="earth.html">Earth</a></li>
+                        <li><a href="mars.html" aria-current="page">Mars</a></li>
+                        <li><a href="jupiter.html">Jupiter</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        <div class="container">
+            <section class="planet-hero">
+                <h1>Mars - The Red Planet</h1>
+                <p>Named after the Roman god of war due to its reddish appearance, Mars has fascinated humans for centuries. This desert world holds clues about the possibility of life beyond Earth and represents humanity's next frontier in space exploration.</p>
+            </section>
+
+            <section class="facts-grid" aria-labelledby="facts-heading">
+                <h2 id="facts-heading" class="sr-only">Mars Facts and Statistics</h2>
+                
+                <article class="fact-card">
+                    <h3>Basic Information</h3>
+                    <p>Distance from Sun: <span class="fact-value">142 million miles (228 million km)</span></p>
+                    <p>Diameter: <span class="fact-value">4,212 miles (6,779 km)</span></p>
+                    <p>Day Length: <span class="fact-value">24 hours 37 minutes</span></p>
+                    <p>Year Length: <span class="fact-value">687 Earth days</span></p>
+                </article>
+
+                <article class="fact-card">
+                    <h3>Atmosphere & Climate</h3>
+                    <p>Composition: <span class="fact-value">95% Carbon Dioxide</span></p>
+                    <p>Atmospheric Pressure: <span class="fact-value">0.6% of Earth's</span></p>
+                    <p>Temperature Range: <span class="fact-value">-195°F to 70°F (-125°C to 20°C)</span></p>
+                    <p>Seasons: <span class="fact-value">Similar to Earth (687 day year)</span></p>
+                </article>
+
+                <article class="fact-card">
+                    <h3>Physical Features</h3>
+                    <p>Largest Volcano: <span class="fact-value">Olympus Mons (13.6 mi high)</span></p>
+                    <p>Largest Canyon: <span class="fact-value">Valles Marineris (2,500 mi long)</span></p>
+                    <p>Polar Ice Caps: <span class="fact-value">Water and CO₂ ice</span></p>
+                    <p>Number of Moons: <span class="fact-value">2 (Phobos and Deimos)</span></p>
+                </article>
+            </section>
+
+            <section class="timeline" aria-labelledby="exploration-heading">
+                <h2 id="exploration-heading" class="timeline-title">Mars Exploration Timeline</h2>
+                
+                <article class="timeline-item">
+                    <div class="timeline-date">1965</div>
+                    <div class="timeline-content">
+                        <h3>Mariner 4 - First Mars Flyby</h3>
+                        <p>The first successful mission to Mars, Mariner 4 took the first close-up images of the Martian surface, revealing a cratered, moon-like landscape and dispelling ideas of an Earth-like Mars.</p>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-date">1976</div>
+                    <div class="timeline-content">
+                        <h3>Viking 1 & 2 - First Successful Landings</h3>
+                        <p>The Viking missions were the first to successfully land on Mars and operate for years. They conducted experiments to search for life and sent back thousands of detailed images of the Martian surface.</p>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-date">1997</div>
+                    <div class="timeline-content">
+                        <h3>Mars Pathfinder & Sojourner Rover</h3>
+                        <p>The first Mars rover, Sojourner, proved that mobile exploration of Mars was possible. It analyzed rocks and soil, paving the way for future rover missions.</p>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-date">2004</div>
+                    <div class="timeline-content">
+                        <h3>Spirit & Opportunity Rovers</h3>
+                        <p>These twin rovers were designed for 90-day missions but operated for years. Opportunity worked for 15 years, discovering evidence that water once flowed on Mars.</p>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-date">2012</div>
+                    <div class="timeline-content">
+                        <h3>Curiosity Rover</h3>
+                        <p>The car-sized Curiosity rover landed with a revolutionary sky crane system. It confirmed that Mars once had conditions suitable for life and continues to make discoveries today.</p>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-date">2021</div>
+                    <div class="timeline-content">
+                        <h3>Perseverance Rover & Ingenuity Helicopter</h3>
+                        <p>The most advanced Mars rover yet, Perseverance is collecting samples for future return to Earth. Ingenuity became the first aircraft to fly on another planet.</p>
+                    </div>
+                </article>
+            </section>
+
+            <section class="weather-simulator" aria-labelledby="weather-heading">
+                <h2 id="weather-heading">Mars Weather Simulator</h2>
+                <p class="section-description">Experience different weather conditions on Mars! Click the buttons below to see how weather changes throughout the Martian year.</p>
+                
+                <div class="weather-controls" role="group" aria-labelledby="weather-heading">
+                    <button class="weather-btn active" onclick="showWeather('summer')" aria-describedby="summer-desc">
+                        Martian Summer
+                        <span id="summer-desc" class="sr-only">Shows summer weather conditions on Mars</span>
+                    </button>
+                    <button class="weather-btn" onclick="showWeather('winter')" aria-describedby="winter-desc">
+                        Martian Winter
+                        <span id="winter-desc" class="sr-only">Shows winter weather conditions on Mars</span>
+                    </button>
+                    <button class="weather-btn" onclick="showWeather('dust-storm')" aria-describedby="storm-desc">
+                        Dust Storm
+                        <span id="storm-desc" class="sr-only">Shows global dust storm conditions on Mars</span>
+                    </button>
+                </div>
+
+                <div class="weather-display" id="weather-display" aria-live="polite">
+                    <div class="weather-icon">☀️</div>
+                    <div class="weather-info">
+                        <h3>Martian Summer</h3>
+                        <p><strong>Temperature:</strong> -20°F to 70°F (-29°C to 20°C)</p>
+                        <p><strong>Conditions:</strong> Clear skies with occasional dust devils</p>
+                        <p><strong>Daylight:</strong> Up to 12 hours of sunlight</p>
+                        <p><strong>Atmospheric Pressure:</strong> Slightly higher due to CO₂ sublimation</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="weather-simulator" aria-labelledby="media-heading">
+           <section class="interactive-section" aria-labelledby="mars-media-heading">
+    <h2 id="mars-media-heading">Martian Terrain Explorer</h2>
+    <p style="text-align: center; color: #ccc; margin-bottom: 2rem;">
+        Click below to explore Mars’s surface interactively.
+    </p>
+    <p style="text-align: center;">
+        <a href="martian-terrain/martian-terrain" target="_blank" style="color: #4a90e2; font-size: 1.2rem;">
+            🚀 Launch Martian Terrain Explorer
+        </a>
+    </p>
+</section>
+        </div>
+    </main>
+
+    <!-- Accessibility Controls -->
+    <aside class="accessibility-controls" aria-label="Accessibility Options">
+        <h3>Accessibility</h3>
+        <button onclick="toggleHighContrast()" aria-label="Toggle high contrast mode">High Contrast</button>
+        <button onclick="toggleLargeText()" aria-label="Toggle large text size">Large Text</button>
+        <button onclick="resetAccessibility()" aria-label="Reset all accessibility options">Reset</button>
+    </aside>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <p>&copy; 2024 Big Planetarium. Making space accessible to everyone.</p>
+            <p>Contact us: <a href="mailto:info@bigplanetarium.org" class="footer-link">info@bigplanetarium.org</a></p>
+        </div>
+    </footer>
+
+    <script src="mars-script.js"></script>
+</body>
+</html>

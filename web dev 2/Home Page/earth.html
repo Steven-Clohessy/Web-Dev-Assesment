@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth - Our Home Planet | Big Planetarium</title>
+    <link rel="stylesheet" href="earth-styles.css">
+</head>
+<body>
+    <!-- Skip to main content link for screen readers -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo" aria-label="Big Planetarium Home">🌌 Big Planetarium</a>
+                <nav role="navigation" aria-label="Main navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="earth.html" aria-current="page">Earth</a></li>
+                        <li><a href="mars.html">Mars</a></li>
+                        <li><a href="jupiter.html">Jupiter</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        <div class="container">
+            <section class="planet-hero">
+                <h1>Earth - Our Home Planet</h1>
+                <p>The third planet from the Sun, Earth is the only known planet with life. Our beautiful blue marble is home to millions of species and provides everything we need to survive and thrive.</p>
+            </section>
+
+            <section class="facts-grid" aria-labelledby="facts-heading">
+                <h2 id="facts-heading" class="sr-only">Earth Facts and Statistics</h2>
+                
+                <article class="fact-card">
+                    <h3>Basic Information</h3>
+                    <p>Distance from Sun: <span class="fact-value">93 million miles (150 million km)</span></p>
+                    <p>Diameter: <span class="fact-value">7,918 miles (12,742 km)</span></p>
+                    <p>Day Length: <span class="fact-value">24 hours</span></p>
+                    <p>Year Length: <span class="fact-value">365.25 days</span></p>
+                </article>
+
+                <article class="fact-card">
+                    <h3>Atmosphere</h3>
+                    <p>Composition: <span class="fact-value">78% Nitrogen, 21% Oxygen</span></p>
+                    <p>Atmospheric Pressure: <span class="fact-value">1 atmosphere (14.7 psi)</span></p>
+                    <p>Temperature Range: <span class="fact-value">-128°F to 136°F (-89°C to 58°C)</span></p>
+                </article>
+
+                <article class="fact-card">
+                    <h3>Physical Features</h3>
+                    <p>Surface: <span class="fact-value">71% water, 29% land</span></p>
+                    <p>Highest Point: <span class="fact-value">Mount Everest (29,032 ft)</span></p>
+                    <p>Deepest Point: <span class="fact-value">Mariana Trench (36,200 ft)</span></p>
+                    <p>Number of Moons: <span class="fact-value">1 (The Moon)</span></p>
+                </article>
+            </section>
+
+            <section class="interactive-section" aria-labelledby="layers-heading">
+                <h2 id="layers-heading">Explore Earth's Layers</h2>
+                <p style="text-align: center; margin-bottom: 2rem; color: #ccc;">Click on each layer to learn more about Earth's internal structure!</p>
+                
+                <div class="earth-layers">
+                    <div class="layer crust" tabindex="0" role="button" aria-describedby="crust-info" onclick="showLayerInfo('crust')" onkeypress="handleKeyPress(event, 'crust')">
+                        <h3>Crust (0-30 miles deep)</h3>
+                        <p>The thin outer shell where we live</p>
+                    </div>
+                    
+                    <div class="layer mantle" tabindex="0" role="button" aria-describedby="mantle-info" onclick="showLayerInfo('mantle')" onkeypress="handleKeyPress(event, 'mantle')">
+                        <h3>Mantle (30-1,800 miles deep)</h3>
+                        <p>Hot, flowing rock that moves continents</p>
+                    </div>
+                    
+                    <div class="layer outer-core" tabindex="0" role="button" aria-describedby="outer-core-info" onclick="showLayerInfo('outer-core')" onkeypress="handleKeyPress(event, 'outer-core')">
+                        <h3>Outer Core (1,800-3,200 miles deep)</h3>
+                        <p>Liquid iron and nickel creating our magnetic field</p>
+                    </div>
+                    
+                    <div class="layer inner-core" tabindex="0" role="button" aria-describedby="inner-core-info" onclick="showLayerInfo('inner-core')" onkeypress="handleKeyPress(event, 'inner-core')">
+                        <h3>Inner Core (3,200-3,963 miles deep)</h3>
+                        <p>Solid iron ball at the center</p>
+                    </div>
+                </div>
+
+                <div id="crust-info" class="layer-info">
+                    <h4>The Crust - Our Foundation</h4>
+                    <p>Earth's crust is like the skin of an apple - very thin compared to the whole planet. It's made of solid rock and is where all life exists. The oceanic crust is thinner (3-6 miles) while continental crust is thicker (up to 30 miles).</p>
+                </div>
+
+                <div id="mantle-info" class="layer-info">
+                    <h4>The Mantle - Earth's Engine</h4>
+                    <p>The mantle makes up 84% of Earth's volume! It's mostly solid rock that flows very slowly due to extreme heat and pressure. This movement drives plate tectonics, creating earthquakes, volcanoes, and mountain ranges.</p>
+                </div>
+
+                <div id="outer-core-info" class="layer-info">
+                    <h4>The Outer Core - Our Magnetic Shield</h4>
+                    <p>This layer of liquid iron and nickel is responsible for Earth's magnetic field. As it moves and flows, it creates electrical currents that generate our protective magnetic field, shielding us from harmful solar radiation.</p>
+                </div>
+
+                <div id="inner-core-info" class="layer-info">
+                    <h4>The Inner Core - The Heart of Earth</h4>
+                    <p>Despite temperatures reaching 9,000°F (hotter than the Sun's surface!), the inner core remains solid due to extreme pressure. It's mostly iron and is about the size of the Moon, spinning slightly faster than the rest of Earth.</p>
+                </div>
+            </section>
+
+            <section class="interactive-section" aria-labelledby="quiz-heading">
+                <h2 id="quiz-heading">Test Your Earth Knowledge!</h2>
+                
+                <div class="quiz-section">
+                    <div class="quiz-question">
+                        <h4>What percentage of Earth's surface is covered by water?</h4>
+                        <div class="quiz-options" role="radiogroup" aria-labelledby="quiz-heading">
+                            <div class="quiz-option" tabindex="0" role="radio" aria-checked="false" onclick="selectAnswer(this, false)" onkeypress="handleQuizKeyPress(event, this, false)">
+                                <span aria-hidden="true">A)</span> 65%
+                            </div>
+                            <div class="quiz-option" tabindex="0" role="radio" aria-checked="false" onclick="selectAnswer(this, true)" onkeypress="handleQuizKeyPress(event, this, true)">
+                                <span aria-hidden="true">B)</span> 71%
+                            </div>
+                            <div class="quiz-option" tabindex="0" role="radio" aria-checked="false" onclick="selectAnswer(this, false)" onkeypress="handleQuizKeyPress(event, this, false)">
+                                <span aria-hidden="true">C)</span> 80%
+                            </div>
+                            <div class="quiz-option" tabindex="0" role="radio" aria-checked="false" onclick="selectAnswer(this, false)" onkeypress="handleQuizKeyPress(event, this, false)">
+                                <span aria-hidden="true">D)</span> 55%
+                            </div>
+                        </div>
+                        <div class="quiz-feedback" id="quiz-feedback" aria-live="polite">
+                            <p id="feedback-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="interactive-section" aria-labelledby="media-heading">
+                <h2 id="media-heading">Earth Rotation</h2>
+                <p style="text-align: center; color: #ccc; margin-bottom: 2rem;">
+                    This is a video of the Earths Rotation:
+                </p>
+                <ul style="max-width: 600px; margin: 0 auto; color: #ccc;">
+                  <div class="media-video">
+    <video controls width="100%" style="max-width: 800px; border-radius: 12px;">
+        <source src="videos/earth video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p style="text-align: center; margin-top: 1rem; color: #ccc;">Earth as seen from space – a time-lapse video</p>
+</div>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <!-- Accessibility Controls -->
+    <aside class="accessibility-controls" aria-label="Accessibility Options">
+        <h3>Accessibility</h3>
+        <button onclick="toggleHighContrast()" aria-label="Toggle high contrast mode">High Contrast</button>
+        <button onclick="toggleLargeText()" aria-label="Toggle large text size">Large Text</button>
+        <button onclick="resetAccessibility()" aria-label="Reset all accessibility options">Reset</button>
+    </aside>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <p>&copy; 2024 Big Planetarium. Making space accessible to everyone.</p>
+            <p>Contact us: <a href="mailto:info@bigplanetarium.org" style="color: #4a90e2;">info@bigplanetarium.org</a></p>
+        </div>
+    </footer>
+
+    <script src="earth-script.js"></script>
+</body>
+</html>
